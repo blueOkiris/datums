@@ -129,6 +129,9 @@ class Interpreter:
                     )
                 else:
                     assert False, 'Unexpected var type in skip statement'
+                
+                if vm.unPauseAmount <= 0:
+                    vm.paused = False
             elif instruction.root.tokenType == lexer.TokenType.Resume:
                 if vm.unPauseAmount > 0:
                     vm.unPauseAmount -= 1
