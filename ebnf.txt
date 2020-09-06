@@ -1,0 +1,22 @@
+<semi>          ::= ';'
+<l-par>         ::= '('
+<r-par>         ::= ')'
+<l-brack>       ::= '['
+<r-brack>       ::= ']'
+<pause-op>      ::= '!'
+<asgn-op>       ::= '=' | '+=' | '-=' | '*=' | '/=' | '%='
+<type-op>       ::= ':'
+//<memb-op>       ::= '.'
+<type-def-op>   ::= '#'
+<res-op>        ::= '>'
+<int>           ::= /[0-9]+/
+<ident>         ::= /[_A-Za-z][_A-Za-z0-9]*/
+
+<addr>      ::= <l-par> <int> <type-op> <ident> <r-par> <r-par>
+<doub-addr> ::= <l-brack> <int> <type-op> <ident> <r-par> <r-brack>
+<var>       ::= <int> | <addr> | <doub-addr>
+<assign>    ::= <var> <asgn-op> <var> { <var> } <semi>
+<pause>     ::= <pause-op> <var>
+
+<typedef>   ::= <type-def-op> <ident> <int>
+<program>   ::= { <structure> | <pause> | <res-op> | <assign> }
