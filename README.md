@@ -4,6 +4,17 @@
 
 A data-oriented esoteric programming language with (basically) only 3 commands
 
+## Running
+
+```
+chmod +x ./datum.py
+./datum.py <filename>
+```
+
+If you want to see the lexing, parsing, and machine state as output as well, you can add the `--debug` tag: `./datum.py <filename> --debug`
+
+Requires Python 3, I think probably Python 3.6, but earlier *might* work
+
 ## How to program (JUST THE BASIC INSTRUCTIONS)
 
 In datums, you can really do three things
