@@ -1,3 +1,6 @@
+"""
+Deprecated:
+
 import enum
 import parser.parser as parser
 import parser.lexer as lexer
@@ -246,4 +249,4 @@ class Interpreter:
             if debug:
                 print(str(vm))
             instruction = vm.getInstruction()
-            
+"""
